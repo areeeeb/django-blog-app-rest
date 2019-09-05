@@ -11,7 +11,7 @@ class Post(models.Model):
     date_posted = models.DateTimeField(default=timezone.now)  # No paran after the timezone.now because we dont want to
     # execute it at that point
 
-    author = models.ForeignKey(User, on_delete=models.CASCADE)  # ForeignKey because User and post have 1 to many
+    author = models.ForeignKey(User, on_delete=models.CASCADE, null=True)  # ForeignKey because User and post have 1 to many
     # relationship, User is the table of users that we will create and models.CASCADE will delete all the posts if the
     # user is deleted
 

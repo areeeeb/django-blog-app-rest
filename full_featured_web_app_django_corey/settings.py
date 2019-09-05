@@ -25,7 +25,7 @@ SECRET_KEY = 'c0-vj#l)p^od^q6*i^eev5f6mq+w*1wb(@hol@8wu$#+j+zngv'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['areeeeb.pythonanywhere.com']
 
 
 # Application definition
@@ -124,6 +124,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = '/home/areeeeb/django-blog-app-rest/static'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Part 8
 MEDIA_URL = '/media/'  # Part 8

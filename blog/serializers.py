@@ -4,9 +4,9 @@ from .models import Post
 from users.serializers import UserSerializer
 
 
-class PostSerializer(serializers.HyperlinkedModelSerializer):
-    author = UserSerializer(read_only=True)
+class PostSerializer(serializers.ModelSerializer):
+    author = UserSerializer(read_only=True, required=False)
 
     class Meta:
         model = Post
-        fields = ['url', 'title', 'content', 'date_posted', 'author']
+        fields = ['pk', 'title', 'content', 'date_posted', 'author']
