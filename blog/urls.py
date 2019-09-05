@@ -13,7 +13,7 @@ from .api_views import PostViewSet, GetPostsByUser
 
 
 router = routers.DefaultRouter()
-router.register(r'post', PostViewSet)
+router.register(r'post', PostViewSet, base_name='post-api')
 
 urlpatterns = [
     path('', PostListView.as_view(), name='blog-home'),  # .as_view because we need to convet class to a view (Part 10)
