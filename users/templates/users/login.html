@@ -1,0 +1,28 @@
+<!–– This code is same as the register.html one with only text changed but still the form is smart enough to know whether
+to show all the fields (for registration) or just two fields (for login). It is because inside the urls.py we set
+the view to login––>
+
+{% extends 'blog/base.html'%}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Join Today</legend>
+                {{ form|crispy }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Sign In</button>
+                <small class="text-muted ml-2">
+                    <a href="{% url 'password_reset' %}">Forgot  zx username or password ?</a>
+                </small>
+            </div>
+        </form>
+    <div class="border-top pt-3">
+        <small class="text-muted">
+            Don't have an account ? <a href="{% url 'register' %}" class="ml-2">Sign Up Now</a>
+        </small>
+    </div>
+    </div>
+{% endblock content %}
