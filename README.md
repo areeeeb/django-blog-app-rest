@@ -11,5 +11,5 @@ A django web app integrated with rest framework.
 # For Post Model
 - [GET] *localhost:8000/api/post-model/post* **returns all the posts on the blog**
 - [GET] *localhost:8000/api/post-model/<username>/posts/* **returns all the posts by the user with <username>**
-- [GET] *http://localhost:8000/api/post-model/post/<pk>/* **returns the post with <pk>**
-- [GET] *http://localhost:8000/api/post-model/post/<pk>/* **edit the post with <pk>**
+- [GET] *localhost:8000/api/post-model/post/<pk>/* **returns the post with <pk>**
+- [GET] *localhost:8000/api/post-model/post/<pk>/* **edit the post with <pk>**
